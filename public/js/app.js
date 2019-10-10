@@ -58,11 +58,19 @@ function loadSongs(search)
 
 function playSong(track_id)
 {
-    SC.stream('/tracks/' + track_id).then(function(player){
-        player.play();
-    });
-
     actual_track_id = track_id;
+
+    // Show player
+    setPlayer(track_id);
+}
+
+function setPlayer(track_id) {
+    var player = document.getElementsByTagName('iframe')[0];
+    var player_box = document.querySelector('.player');
+    var player_src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' + track_id;
+
+    player.setAttribute('src', player_src);
+    player_box.classList.remove('hidden');
 }
 
 function removePreviousTrack(target)

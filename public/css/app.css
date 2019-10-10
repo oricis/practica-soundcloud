@@ -82,6 +82,11 @@ input:selected {
 .left-side-btn {
     margin-left: 1rem;
 }
+.player {
+    border : none !important;
+    margin : 1rem 0;
+    padding: 0;
+}
 .results {
     display: flex;
     flex-wrap: wrap;
