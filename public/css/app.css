@@ -8,7 +8,6 @@ footer {
     border-top : 20px solid #0478E1;
     padding-top: 2rem;
 }
-
 div {
     margin       : 1rem;
     padding      : 1rem;
@@ -21,15 +20,13 @@ input {
     border-radius: .2rem;
     font-size    : 1rem;
     padding      : 1rem;
+    width        : 47%;
 }
 input:focus,
 input:selected {
     background: black;
 }
 
-.actual-song {
-
-}
 .actual-song,
 .color-scheme,
 .form,
@@ -40,7 +37,7 @@ input:selected {
 .btn {
     background  : #0478E1;
     border-color: #02437D;
-    color       : pink;
+    color       : white;
     cursor      : pointer;
     font-weight : bold;
     min-width   : 120px;
@@ -56,12 +53,6 @@ input:selected {
     height: 50px;
     flex: 1 1 0px;
 }
-.color-scheme li * {
-    display: none;
-}
-.code:first-child {
-    display: block;
-}
 .cover-image {
     border : 0 !important;
     cursor : pointer;
@@ -74,7 +65,6 @@ input:selected {
     border-radius: .2rem;
     box-shadow: 0px 0px 9px white;
 }
-
 .cover-image img:hover {
     border-radius: .2rem;
 }
@@ -83,10 +73,54 @@ input:selected {
     padding: 5px;
     width  : 90px;
 }
+.droppable-zone-info {
+    font-size: 1.25rem;
+    position : relative;
+    z-index  : -99;
+}
+.form-group {
+    border : 0 !important;
+    padding: 0 !important;
+}
+.form-title {
+    font-size : 1.5rem;
+    margin    : 0 auto 1rem;
+    text-align: left;
+    width     : 96%;
+}
 .left-side-btn {
-    margin-left: 1rem;
+    margin-left: 1%;
+}
+.player {
+    border : none !important;
+    margin : 1rem 0;
+    padding: 0;
 }
 .results {
     display: flex;
     flex-wrap: wrap;
+}
+
+
+/***********************************************************************
+ * Breakpoint - to 480px
+ **/
+
+@media (max-width: 480px) {
+    input,
+    .form-title {
+        width: 92%;
+    }
+    .btn {
+        margin: .5rem 0;
+    }
+}
+
+@media (min-width: 640px) {
+    .btn {
+        width: 30%;
+    }
+    .form-title {
+        width: 78%
+    }
 }
